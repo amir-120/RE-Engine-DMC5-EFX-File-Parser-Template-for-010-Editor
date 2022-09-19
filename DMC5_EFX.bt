@@ -725,52 +725,52 @@ typedef enum <UINT32> {
     starting_frame_only = 0,
 	looped_animation = 1,
 	animate_once = 2,
-	animate_once_and_stay_on_last_untill_2C = 3,
+	animate_once_freeze_on_last_frame = 3,
 	
 	starting_frame_only_flipped_vertically = 4,
 	looped_animation_flipped_vertically = 5,
 	animate_once_flipped_vertically = 6,
-	animate_once_and_stay_on_last_untill_2C_flipped_vertically = 7,
+	animate_once_freeze_on_last_frame_flipped_vertically = 7,
 	
 	starting_frame_only_random_flipped_vertically = 8,
 	looped_animation_random_flipped_vertically = 9,
 	animate_once_random_flipped_vertically = 10,
-	animate_once_and_stay_on_last_untill_2C_random_flipped_vertically = 11,
+	animate_once_freeze_on_last_frame_random_flipped_vertically = 11,
 	
 	starting_frame_only_dup = 12,
 	looped_animation_dup = 13,
 	animate_once_dup = 14,
-	animate_once_and_stay_on_last_untill_2C_dup = 15,
+	animate_once_freeze_on_last_frame_dup = 15,
 	
 	starting_frame_only_flipped_horizontally = 16,
 	looped_animation_flipped_horizontally = 17,
 	animate_once_flipped_horizontally = 18,
-	animate_once_and_stay_on_last_untill_2C_flipped_horizontally = 19,
+	animate_once_freeze_on_last_frame_flipped_horizontally = 19,
 	
 	starting_frame_only_rotated_180 = 20,
 	looped_animation_rotated_180 = 21,
 	animate_once_rotated_180 = 22,
-	animate_once_and_stay_on_last_untill_2C_rotated_180 = 23,
+	animate_once_freeze_on_last_frame_rotated_180 = 23,
 	
 	starting_frame_only_random_rotated_180 = 24,
 	looped_animation_random_rotated_180 = 25,
 	animate_once_random_rotated_180 = 26,
-	animate_once_and_stay_on_last_untill_2C_random_rotated_180 = 27,
+	animate_once_freeze_on_last_frame_random_rotated_180 = 27,
 	
 	starting_frame_only_flipped_horizontally_dup = 16,
 	looped_animation_flipped_horizontally_dup = 17,
 	animate_once_flipped_horizontally_dup = 18,
-	animate_once_and_stay_on_last_untill_2C_flipped_horizontally_dup = 19,
+	animate_once_freeze_on_last_frame_flipped_horizontally_dup = 19,
 	
 	starting_frame_only_random_flipped_horizontally = 32,
 	looped_animation_random_flipped_horizontally = 33,
 	animate_once_random_flipped_horizontally = 34,
-	animate_once_and_stay_on_last_untill_2C_random_flipped_horizontally = 35,
+	animate_once_freeze_on_last_frame_random_flipped_horizontally = 35,
 	
 	starting_frame_only_flipped_vertically_random_flipped_horizontally = 36,
 	looped_animation_flipped_vertically_random_flipped_horizontally = 37,
 	animate_once_flipped_vertically_random_flipped_horizontally = 38,
-	animate_once_and_stay_on_last_untill_2C_flipped_vertically_random_flipped_horizontally = 39
+	animate_once_freeze_on_last_frame_flipped_vertically_random_flipped_horizontally = 39
 } Animation_Mode <read=Name_AnimationMode>;
 
 string Name_AnimationMode(Animation_Mode& t){
@@ -788,7 +788,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 3:
-        return "Stay On The Last Frame Until 2C Duration Set Ends";
+        return "Do The Animation Once And Freeze On Last Frame";
         break;
     
     case 4:
@@ -804,7 +804,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 7:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Flipped Vertically";
+        return "Do The Animation Once And Freeze On Last Frame - Flipped Vertically";
         break;
     
     case 8:
@@ -820,7 +820,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 11:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Randomized Flipped Vertically";
+        return "Do The Animation Once And Freeze On Last Frame - Randomized Flipped Vertically";
         break;
     
     case 12:
@@ -836,7 +836,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 15:
-        return "Stay On The Last Frame Until 2C Duration Set Ends";
+        return "Do The Animation Once And Freeze On Last Frame";
         break;
     
     case 16:
@@ -852,7 +852,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 19:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Flipped Horizontally";
+        return "Do The Animation Once And Freeze On Last Frame - Flipped Horizontally";
         break;
     
     case 20:
@@ -868,7 +868,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 23:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Rotated 180 Degrees";
+        return "Do The Animation Once And Freeze On Last Frame - Rotated 180 Degrees";
         break;
     
     case 24:
@@ -884,7 +884,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 27:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Flipped Horizontally - Randomized Flipped Vertically";
+        return "Do The Animation Once And Freeze On Last Frame - Flipped Horizontally - Randomized Flipped Vertically";
         break;
     
     case 28:
@@ -900,7 +900,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 31:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Flipped Horizontally";
+        return "Do The Animation Once And Freeze On Last Frame - Flipped Horizontally";
         break;
     
     case 32:
@@ -916,7 +916,7 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 35:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Randomized Flipped Horizontally";
+        return "Do The Animation Once And Freeze On Last Frame - Randomized Flipped Horizontally";
         break;
     
     case 36:
@@ -932,8 +932,42 @@ string Name_AnimationMode(Animation_Mode& t){
         break;
     
     case 39:
-        return "Stay On The Last Frame Until 2C Duration Set Ends - Flipped Vertically - Randomized Flipped Horizontally";
+        return "Do The Animation Once And Freeze On Last Frame - Flipped Vertically - Randomized Flipped Horizontally";
         break;
+    //there's more
+    default:
+        local string ret;
+        SPrintf(ret,"%u" ,t);
+        return ret;
+        break;
+    }
+}
+
+typedef enum <UINT32> {
+    starting_frame_only_mesh = 0,
+	looped_animation_mesh = 1,
+	animate_once_mesh = 2,
+	animate_once_freeze_on_last_frame_mesh = 3
+} Animation_Mode_Mesh <read=Name_AnimationModeMesh>;
+
+string Name_AnimationModeMesh(Animation_Mode_Mesh& t){
+    switch(t){
+    case 0:
+        return "First Frame Only";
+        break;
+    
+    case 1:
+        return "Looped Animation";
+        break;
+    
+    case 2:
+        return "Do The Animation Once And Disappear";
+        break;
+    
+    case 3:
+        return "Do The Animation Once And Freeze On Last Frame";
+        break;
+    
     //there's more
     default:
         local string ret;
@@ -968,7 +1002,7 @@ void HeaderKind(EffectGraphType typeId){
 			break;
 
 		case ItemType_Transform3D:
-            struct{
+            //struct{
                 uint32 ukn;
 			    float xPos <name="Position X">;
 			    float yPos <name="Position Y">;
@@ -980,7 +1014,7 @@ void HeaderKind(EffectGraphType typeId){
 			    float yScale <name="Scale Y">;
 			    float zScale <name="Scale Z">;
 			    uint32 ukn;
-            } transform3D <name="Transform 3D">;
+            //} transform3D <name="Transform 3D">;
             break;
 
 		case ItemType_TypePolygon:
@@ -997,8 +1031,8 @@ void HeaderKind(EffectGraphType typeId){
 				float rotaionYRange <name="Rotaion Y Range">;
 				float rotaionZ <name="Rotaion Z">;
 				float rotaionZRange <name="Rotaion Z Range">;
-				float overallScale <name="Overall Scale">;
-				float overallScaleRange <name="Overall Scale Range">;
+				float scaleMultiplier <name="Scale Multiplier">;
+				float scaleMultiplierRange <name="Scale Multiplier Range">;
 				float scaleX <name="Scale X">;
 				float scaleXRange <name="Scale X Range">;
 				float scaleY <name="Scale Y">;
@@ -1046,19 +1080,19 @@ void HeaderKind(EffectGraphType typeId){
 			break;
 
 		case ItemType_UVSequence:
-			struct{
+			//struct{
 					uint32 ukn[3];
-                    uint32 startingFrame1 <name="Starting Frame">;
-                    uint32 startingFrame2 <name="Starting Frame">;
-                    float animationSpeed1 <name="Animation Speed">;
-                    float animationSpeed2 <name="Animation Speed">;
+                    uint32 startingFrame1 <name="Starting Frame Min">;
+                    uint32 startingFrame2 <name="Starting Frame Max">;
+                    float animationSpeed1 <name="Animation Speed Min">;
+                    float animationSpeed2 <name="Animation Speed Max">;
                     Animation_Mode mode <name="Texture Animation Mode">;
                     uvs_t  uvs <name="UVS Path">;
 					/*uint32  uvsPathSize <name="UVS Path length">;
 					if(0 < uvsPathSize){
 						wchar_t uvsPath[uvsPathSize] <name="UVS Path", bgcolor=0x99FF99, open=suppress>;
 					}*/
-			} uVSequence <name="UV Sequence">;
+			//} uVSequence <name="UV Sequence">;
 			break;
 
 		case ItemType_ShaderSettings:
@@ -1131,27 +1165,33 @@ void HeaderKind(EffectGraphType typeId){
 			break;
 
 		case ItemType_TypeMesh:
-			struct{
+			//struct{
 				uint32 ukn1[2];
 				uint32 overriddenHashCount <name="Overridden Hash Count">;
                 mpos[h] = FTell();
                 h++;
                 mid_cc mid_color;
-				uint32 ukn2[8];
-                float rotationXMin <name="Rotation Minimum X">;
-                float rotationXMax <name="Rotation Maximum X">;
-                float rotationYMin <name="Rotation Minimum Y">;
-                float rotationYMax <name="Rotation Y Maximum">;
-                float rotationZMin <name="Rotation Minimum Z">;
-                float rotationZMax <name="Rotation Z Maximum">;
-                float scaleXMin <name="Scale Minimum X">;
-                float scaleXMax <name="Scale X Maximum">;
-                float scaleYMin <name="Scale Minimum Y">;
-                float scaleYMax <name="Scale Y Maximum">;
-                float scaleZMin <name="Scale Minimum Z">;
-                float scaleZMax <name="Scale Z Maximum">;
-                float scaleMultiplierMin <name="Scale Multiplier Minimum">;
-                float scaleMultiplierMax <name="Scale Multiplier Maximum">;
+				uint32 frameCount <name="Frame Count">;
+				uint32 startingFrameMin <name="Starting Frame Min">;
+				uint32 startingFrameMax <name="Starting Frame Max">;
+				float animationSpeedMin <name="Animation Speed Min">;
+				float animationSpeedMax <name="Animation Speed Max">;
+				Animation_Mode_Mesh mode <name="Animation Mode">;
+				uint32 ukn2[2];
+                float rotationX <name="Rotation X">;
+                float rotationXRange <name="Rotation X Range">;
+                float rotationY <name="Rotation Y">;
+                float rotationYRange <name="Rotation Y Range">;
+                float rotationZ <name="Rotation Z">;
+                float rotationZRange <name="Rotation Z Range">;
+                float scaleX <name="Scale X">;
+                float scaleXRange <name="Scale X Range">;
+                float scaleY <name="Scale Y">;
+                float scaleYRange <name="Scale Y Range">;
+                float scaleZ <name="Scale Z">;
+                float scaleZRange <name="Scale Z Range">;
+                float scaleMultiplier <name="Scale Multiplier">;
+                float scaleMultiplierRange <name="Scale Multiplier Range">;
 				uint32 ukn3[3];
 				mdf_mesh_t mesh <name="Mesh">;
 				mdf_mdf_t  mdf <name="MDF">;
@@ -1181,7 +1221,7 @@ void HeaderKind(EffectGraphType typeId){
 				if(0 < tex.size){
 					wchar_t texP[tex.size] <name="Texture Path", bgcolor=0xFFC79F>;
 				}
-			} typeMesh <name="Type Mesh">;
+			//} typeMesh <name="Type Mesh">;
 			break;
 
 		case ItemType_Velocity3D:
@@ -1223,8 +1263,8 @@ void HeaderKind(EffectGraphType typeId){
 				uint32 ukn2[2];
 				float rotation <name="Rotation">;
 				float rotationRange <name="Rotation Range">;
-				float overallScale <name="Overall Scale">;
-				float overallScaleRange <name="Overall Scale Range">;
+				float scaleMultiplier <name="Scale Multiplier">;
+				float scaleMultiplierRange <name="Scale Multiplier Range">;
 				float scaleX <name="Scale X">;
 				float scaleXRange <name="Scale X Range">;
 				float scaleY <name="Scale Y">;
@@ -1258,7 +1298,7 @@ void HeaderKind(EffectGraphType typeId){
 			break;
 
 		case ItemType_EmitterShape3D:
-			struct{
+			//struct{
 				uint32  ukn;
 				float   spreadXMin <name="Spread X Minimum">;
 				float   spreadXMax <name="Spread X Maximum">;
@@ -1267,7 +1307,7 @@ void HeaderKind(EffectGraphType typeId){
 				float   spreadZMin <name="Spread Z Minimum">;
 				float   spreadZMax <name="Spread Z Maximum">;
 				uint32  ukn1[12];
-			} emitterShape3D <name="Emitter Shape 3D">;
+			//} emitterShape3D <name="Emitter Shape 3D">;
 			break;
 
 		case ItemType_TypeRibbonLength:
@@ -1304,26 +1344,24 @@ void HeaderKind(EffectGraphType typeId){
 			break;
 
 		case ItemType_PtCollision:
-			struct{
-				uint32 ukn1;
-				ubyte ukn2;
-				ubyte ukn3;
-				ubyte ukn4;
-				ubyte ukn5;
-				float ukn6;
-				float ukn7;
-				uint32 ukn8;
-				uint32 ukn9;
-				float  ukn10;
-				float  ukn11;
-				float  ukn12;
-				float  ukn13;
-				uint32 ukn14;
-				float  ukn15;
-				float  ukn16;
-				float  ukn17;
-				float  ukn18;
-			} ptCollision <name="Pt Collision">;
+			uint32 ukn1;
+			ubyte ukn2;
+			ubyte ukn3;
+			ubyte ukn4;
+			ubyte ukn5;
+			float ukn6;
+			float ukn7;
+			uint32 ukn8;
+			uint32 ukn9;
+			float  ukn10;
+			float  ukn11;
+			float  ukn12;
+			float  ukn13;
+			uint32 ukn14;
+			float  ukn15;
+			float  ukn16;
+			float  ukn17;
+			float  ukn18;
 			break;
 
 		case ItemType_PtColor:
@@ -1359,12 +1397,12 @@ void HeaderKind(EffectGraphType typeId){
 			break;
 
 		case ItemType_Distortion:
-			struct{
+			//struct{
                 uint32 ukn1;
                 uint32 ukn2;
                 float  strength <name="Distortion Strength">;
 				//ubyte ukn[0x10 - 4];
-			} distortion <name="Distortion">;
+			//} distortion <name="Distortion">;
 			break;
 
 		case ItemType_FixRandomGenerator:
@@ -1982,8 +2020,15 @@ void HeaderKind(EffectGraphType typeId){
             break;
 
 		case ItemType_MeshEmitter:
-            struct{
-				uint32 ukn2[21];
+            //struct{
+				uint32 ukn1[6];
+				float scaleX <name="Scale X">;
+				float scaleY <name="Scale Y">;
+				float scaleZ <name="Scale Z">;
+				float rotationX <name="Rotation X">;
+				float rotationY <name="Rotation Y">;
+				float rotationZ <name="Rotation Z">;
+				uint32 ukn2[9];
 				uint32 mapPathSize <name="Map Path Size">;
 				uint32 meshPathSize <name="Mesh Path Size">;
 				uint32 mdfPathSize <name="MDF Path Sie">;
@@ -2000,7 +2045,7 @@ void HeaderKind(EffectGraphType typeId){
 				if(0 < mskPathSize){
 					wchar_t tex[mskPathSize] <name="MSK Path", bgcolor=0xFFC79F, open=suppress>;
 				}
-            } meshEmitter <name="Mesh Emitter">;
+            //} meshEmitter <name="Mesh Emitter">;
             break;
 
 		case ItemType_MeshEmitterExpression:
